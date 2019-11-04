@@ -11,3 +11,14 @@ def is_prime(num):
     for i in range(3,root,2):
         if ( num % i ) == 0: return False
     return True
+
+def n_prime(number):
+    lar = 0
+    i = 3
+    times = 1
+    while(times<number-1):
+        i+=2
+        if is_prime(i) is True:
+            times+=1
+            lar = i
+    return lar
