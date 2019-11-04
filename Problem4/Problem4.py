@@ -3,16 +3,18 @@
 #The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 #THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-import lib
 
-num = 13195
-lfactor = 0
-factors = []
-i = 2
-while ( i * i < num ):
-
-
-
-
-
-    i += 2
+import sys
+from lib import is_palindrome
+largest = 0
+lx=0
+ly=0
+for x in range(100,999):
+    for y in range(100,999):
+        if(is_palindrome(int(x*y))):
+            if(largest< (int(x*y)) ):
+                largest = (int(x*y))
+                lx=x
+                ly=y
+            
+print(largest)
