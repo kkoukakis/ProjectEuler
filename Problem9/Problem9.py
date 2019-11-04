@@ -1,10 +1,10 @@
 import lib
 import math
 n=10000
-
-for a in range(1,n):
+a=1
+while a != False:
     for b in range(a+1,n):
-        c = lib.is_special(a, b )
+        c = lib.getC(a, b )
         if(c is not 0):
             if lib.sum_is_equal_to(a, b , c , 1000):
                 print(a*b*c)
@@ -12,3 +12,4 @@ for a in range(1,n):
                 break
         if a == False : break
     if a == False : break
+    a+=1

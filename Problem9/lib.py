@@ -1,5 +1,5 @@
 import math
-def is_special(a,b):
+def getC(a,b):
     c = a**2 + b **2
     c = math.sqrt(c)
     if c == int (c):
